@@ -1,0 +1,95 @@
+
+body{
+    background-color:floralwhite;
+    
+}
+
+
+
+
+
+.text-right {
+    margin-top: 0px;
+}
+
+.eeuu {
+    margin-top: 80px;
+
+}
+
+.logo1 {
+    height: 120px;
+    margin-bottom: 0px;
+
+}
+
+
+.flexparent {
+    display: flex;
+}
+
+.partyLoyalty {
+    padding-top: 20px;
+}
+
+.table {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+thead {
+    background-color: darkgrey;
+}
+
+
+p {
+    font-family: cursive;
+}
+
+
+.top-page {
+    background-image:url(../Images/background.jpg);
+    background-size: cover;
+}
+
+.text-right {
+    margin: 0px;
+
+}
+
+.div-padre {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.hijo1 {
+    padding: 10px;
+}
+
+.dropdown-toggle {
+    font-weight: bold;
+    text-decoration-line: underline;
+
+}
+
+.actives {
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+.head-fixed {
+    table-layout: fixed;
+}
+
+.table-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
+
+

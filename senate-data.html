@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery.colorbox-min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="css/colorbox.css">
+
+    <link rel="stylesheet" href="css/css-gov.css">
+
+</head>
+
+
+<body id="senate">
+
+    <div class="top-page">
+
+        <img class="logo1" src="Images/usa-logo.png" alt="Logo">
+        <p class="text-right"><a href="mailto:info@tgif.net"><span style="font-weight:bold">info@tgif.net</span></a>
+            <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+        </p>
+    </div>
+
+
+
+    <div class="navigation">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+
+
+
+                    <li class="actives"><a href="index.html">Home</a></li>
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="senate-data.html">Senate</a></li>
+                            <li><a href="house-data.html">House</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="senate-attendance.html">Senate</a></li>
+                            <li><a href="house_attendance.html">House</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="senate-party-loyalty.html">Senate</a></li>
+                            <li><a href="house_loyalty.html">House</a></li>
+                        </ul>
+
+
+
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+
+    </div>
+
+    <div class="container">
+
+
+        <h2>Senators</h2>
+        <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+    </div>
+    <div class="container">
+        <div class="div-padre">
+            <div class="hijo-1-1">
+                <form id="target">
+                    <h3>Filter by Party:</h3>
+                    <label><input class="party" type="checkbox" value="D" name="Party"> Democrat</label>
+                    <label><input class="party" type="checkbox" value="R" name="Party">  Republican</label>
+                    <label><input class="party" type="checkbox" value="I" name="Party"> Independent</label>
+                    <br>
+                </form>
+            </div>
+            <div class="hijo-1-1">
+
+                <form name="filter" id="FilterForm" action="" method="">
+                    <span><h4>Filter by State</h4> </span>
+                    <select id="dropdown-filter" class="drop">
+                       <option class="option">--All--</option>
+      
+                     </select>
+
+                </form>
+            </div>
+
+        </div>
+        <div class="table-responsive">
+            <table id="senate-data-body" class="table">
+                <thead id="senate-data-head">
+                    <tr class="danger">
+                        <th>Senator</th>
+                        <th>Party Affilication</th>
+                        <th>State</th>
+                        <th>Senority</th>
+                        <th>Votes %</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!--TEMPLATE DE MUSTACHE-->
+
+    <script type="text/html" id="order-template">
+        <thead>
+            <th>Senator</th>
+            <th>Party Affilication</th>
+            <th>State</th>
+            <th>Senority</th>
+            <th>Votes %</th>
+        </thead>
+
+        {{#members}}
+
+        <tr class="myRow">
+
+            <td> <a class="gallery" id="url-id" href={{url}}> {{first_name}}  {{middle_name}} {{last_name}}</a></td>
+            <td class="partyValue">{{party}}</td>
+            <td class="stateValue">{{state}}</td>
+            <td>{{seniority}}</td>
+            <td>{{votes_with_party_pct}}</td>
+        </tr>{{/members}}
+
+    </script>
+
+
+
+
+
+
+    <footer>
+        <div class="well">
+            <p class="text-center"><span style="font-weight:bold"> © 2016 TGIF All rights reserved</span></p>
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script src="mustache.js"></script>
+    <script src="congress-113-senate.js"></script>
+
+    <script src="js/congress-task.js"></script>
+
+
+
+
+</body>
+
+
+
+</html>
